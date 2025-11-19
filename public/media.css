@@ -1,7 +1,6 @@
 /* Media Queries */
 
 @media (max-width: 1200px) {
-    /* Ajustes para telas grandes */
     #prev-product {
         left: 0;
     }
@@ -11,10 +10,9 @@
 }
 
 @media (max-width: 1024px) {
-    /* Ajustes para Tablets/Laptops Pequenos */
     .products-carousel {
         padding-bottom: 20px;
-        overflow-x: scroll; /* Permite rolagem no tablet */
+        overflow-x: scroll; 
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
     }
@@ -28,10 +26,10 @@
     }
     
     .carousel-nav-btn {
-        display: none; /* Oculta as setas em telas menores para forçar o scroll touch */
+        display: none; 
     }
     
-    /* About Section */
+   
     .about-content {
         gap: 60px;
     }
@@ -46,11 +44,11 @@
 }
 
 @media (max-width: 768px) {
-    /* Ajustes para Mobile e Tablets Verticais */
+
     
     nav {
         padding: 0 20px;
-        height: 75px; /* Altura um pouco menor */
+        height: 75px; 
     }
 
     .logo-text {
@@ -66,7 +64,7 @@
     .nav-links {
         display: none; 
         position: fixed;
-        top: 75px; /* Ajusta ao novo header height */
+        top: 75px; 
         left: 0;
         width: 100%;
         height: auto;
@@ -104,7 +102,7 @@
     }
     
     .nav-links > li > a::after {
-        display: none; /* Remove sublinhado no mobile */
+        display: none; 
     }
     
     .nav-links a:hover {
@@ -117,7 +115,6 @@
         display: block;
     }
     
-    /* Dropdown no Mobile */
     .dropdown-content {
         position: static; 
         width: 100%;
@@ -127,7 +124,7 @@
         box-shadow: none;
         padding: 0;
         display: none; 
-        opacity: 1; /* Transição ignorada no mobile, controlada por JS (display) */
+        opacity: 1; 
         transform: translateY(0);
         border-radius: 0;
     }
@@ -156,7 +153,6 @@
         transform: rotate(180deg);
     }
 
-    /* Hero */
     .hero-logo {
         font-size: 48px;
     }
@@ -192,13 +188,12 @@
         padding: 30px;
     }
     
-    /* Produtos (Carrossel) */
     .products-carousel {
         justify-content: flex-start;
     }
     
     .carousel-item {
-        flex: 0 0 calc(100% - 0px); /* Um produto por tela */
+        flex: 0 0 calc(100% - 0px); 
         max-width: 100%;
     }
     
@@ -233,7 +228,6 @@
 }
 
 @media (max-width: 480px) {
-    /* Ajustes para celulares pequenos */
     
     .hero-logo {
         font-size: 40px;

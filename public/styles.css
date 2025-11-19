@@ -160,7 +160,6 @@ nav {
     margin-left: -2px;
 }
 
-/* Section Title REUTILIZADO */
 .section-title {
     font-size: 48px;
     color: #20324a;
@@ -184,7 +183,6 @@ nav {
     line-height: 1.8;
 }
 
-/* Hero Section */
 .hero {
     background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
     min-height: 100vh;
@@ -274,7 +272,6 @@ nav {
     background: #1a2838;
 }
 
-/* About Section */
 .about-section {
     padding: 100px 40px;
     background: white;
@@ -342,7 +339,6 @@ nav {
     font-weight: 400;
 }
 
-/* Products Section */
 .products-section {
     padding: 100px 40px;
     background: #f9f9f9;
@@ -498,7 +494,7 @@ nav {
     margin-bottom: 15px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
     border: 5px solid #fff; 
-    outline: 5px solid #00aaff; /* Azul claro (referência da imagem) */
+    outline: 5px solid #00aaff; 
     transition: all 0.3s ease;
 }
 
@@ -649,7 +645,6 @@ nav {
     border-color: white;
 }
 
-/* Footer */
 footer {
     background: #0a0a0a;
     color: white;
@@ -663,7 +658,6 @@ footer p {
     font-size: 14px;
 }
 
-/* WhatsApp Float */
 .whatsapp-float {
     position: fixed;
     width: 65px;
