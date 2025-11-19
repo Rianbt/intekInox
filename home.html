@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intek - Soluções em Aço Inox LTDA</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="/public/styles.css">
+    <link rel="stylesheet" href="/public/media.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,9 +16,24 @@
                 <div class="logo-text">INTEK</div>
             </div>
             <ul class="nav-links">
-                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
-                <li><a href="#produtos" class="nav-link">Produtos</a></li>
+                
+                <li class="dropdown">
+                    <a href="#produtos" class="nav-link dropbtn">
+                        Produtos <span class="arrow-down">▼</span>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="produtos/chapas.html">Chapas</a></li>
+                        <li><a href="produtos/tubos.html">Tubos</a></li>
+                        <li><a href="produtos/barras.html">Barras</a></li>
+                        <li><a href="produtos/bobinas.html">Bobinas</a></li>
+                        <li><a href="produtos/cantoneiras.html">Cantoneiras</a></li>
+                        <li><a href="produtos/slitter.html">Slitter</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#contato" class="nav-link">Contato</a></li>
             </ul>
             <button class="mobile-menu">☰</button>
         </nav>
@@ -44,7 +59,7 @@
             
             <div class="about-content">
                 <div class="about-image-container">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 450'%3E%3Cdefs%3E%3ClinearGradient id='steel' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23505050'/%3E%3Cstop offset='50%25' style='stop-color:%23909090'/%3E%3Cstop offset='100%25' style='stop-color:%23505050'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23404040' width='600' height='450'/%3E%3Cg opacity='0.3'%3E%3Ccircle cx='150' cy='150' r='100' fill='url(%23steel)'/%3E%3Ccircle cx='450' cy='300' r='120' fill='url(%23steel)'/%3E%3Ccircle cx='300' cy='225' r='80' fill='url(%23steel)'/%3E%3C/g%3E%3Ctext x='300' y='220' font-family='Arial' font-size='70' font-weight='bold' fill='%23ffffff' text-anchor='middle' opacity='0.15'%3EINTEK%3C/text%3E%3Ctext x='300' y='260' font-family='Arial' font-size='22' fill='%23ffffff' text-anchor='middle' opacity='0.2'%3EAço Inoxidável%3C/text%3E%3C/svg%3E" alt="Intek Indústria">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23ccc'/%3E%3Ctext x='50%25' y='50%25' font-size='10' fill='%23333' text-anchor='middle' alignment-baseline='middle'%3EPlaceholder Imagem About%3C/text%3E%3C/svg%3E" alt="Imagem Ilustrativa sobre a Intek">
                 </div>
                 <div>
                     <p class="about-text">
@@ -55,6 +70,13 @@
                     </p>
                     <p class="about-text">
                         Com anos de experiência no mercado, nos consolidamos como referência em qualidade e atendimento personalizado.
+                    </p>
+
+                    <!-- Botão/link adicionado que direciona para a página "quem-somos.html" -->
+                    <p style="margin-top:18px;">
+                        <a href="quem-somos.html" class="cta-button" style="background:#20324a;color:#fff;text-decoration:none;">
+                            Quem Somos
+                        </a>
                     </p>
                 </div>
             </div>
@@ -67,46 +89,69 @@
             </div>
         </div>
     </section>
-
-    <section id="produtos" class="products-section">
+    <section id="produtos" class="products-section" style="background: white;">
         <div class="products-container">
             <div class="products-intro">
-                <h2>Linha Completa em Aço Inox</h2>
+                <h2 class="section-title">Linha Completa em Aço Inox</h2>
                 <p>
                     Oferecemos produtos de aço inoxidável e carbono, de diversos diâmetros e espessuras, atendendo clientes dos mais variados portes e segmentos.
                 </p>
             </div>
 
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='steel1' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%23a0a0a0'/%3E%3Cstop offset='50%25' style='stop-color:%23d0d0d0'/%3E%3Cstop offset='100%25' style='stop-color:%23a0a0a0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%3E%3Cg transform='translate(50,80) rotate(-12)'%3E%3Crect fill='url(%23steel1)' x='0' y='0' width='300' height='35' rx='2'/%3E%3Crect fill='url(%23steel1)' x='0' y='45' width='300' height='35' rx='2' opacity='0.95'/%3E%3Crect fill='url(%23steel1)' x='0' y='90' width='300' height='35' rx='2' opacity='0.9'/%3E%3Crect fill='url(%23steel1)' x='0' y='135' width='300' height='35' rx='2' opacity='0.85'/%3E%3C/g%3E%3C/svg%3E" alt="Chapas de Aço Inox" class="product-card-image">
-                    <div class="product-card-content">
-                        <h3>Chapas de Aço Inox</h3>
-                    </div>
-                </div>
+            <div class="products-container-wrapper">
+                <div class="products-carousel" id="products-carousel">
+                    
+                    <a href="produtos/chapas.html" class="product-card carousel-item">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='steel1' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%23a0a0a0'/%3E%3Cstop offset='50%25' style='stop-color:%23d0d0d0'/%3E%3Cstop offset='100%25' style='stop-color:%23a0a0a0'/%E3%80%89%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%E3%80%89%3Cg transform='translate(50,80) rotate(-12)'%3E%3Crect fill='url(%23steel1)' x='0' y='0' width='300' height='35' rx='2'/%E3%80%89%3Crect fill='url(%23steel1)' x='0' y='45' width='300' height='35' rx='2' opacity='0.95'/%E3%80%89%3Crect fill='url(%23steel1)' x='0' y='90' width='300' height='35' rx='2' opacity='0.9'/%E3%80%89%3Crect fill='url(%23steel1)' x='0' y='135' width='300' height='35' rx='2' opacity='0.85'/%E3%80%89%3C/g%3E%3C/svg%3E" alt="Chapas de Aço Inox" class="product-card-image">
+                        <div class="product-card-content">
+                            <h3>Chapas</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="produtos/tubos.html" class="product-card carousel-item">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='tube' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23b0b0b0'/%3E%3Cstop offset='50%25' stop-color='%23e0e0e0'/%E3%80%89%3Cstop offset='100%25' stop-color='%23b0b0b0'/%E3%80%89%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%E3%80%89%3Crect x='50' y='125' width='300' height='50' rx='5' fill='url(%23tube)'/%E3%80%89%3Crect x='50' y='75' width='300' height='50' rx='5' fill='url(%23tube)' transform='rotate(10 200 150)'/%E3%80%89%3C/svg%3E" alt="Tubos de Aço Inox" class="product-card-image">
+                        <div class="product-card-content">
+                            <h3>Tubos</h3>
+                        </div>
+                    </a>
 
-                <div class="product-card">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3CradialGradient id='coil'%3E%3Cstop offset='0%25' style='stop-color:%23d8d8d8'/%3E%3Cstop offset='100%25' style='stop-color:%23888888'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='%23e0e0e0' width='400' height='300'/%3E%3Cg%3E%3Cellipse cx='110' cy='150' rx='65' ry='65' fill='url(%23coil)'/%3E%3Cellipse cx='110' cy='150' rx='45' ry='45' fill='%23f5f5f5'/%3E%3Cellipse cx='200' cy='150' rx='65' ry='65' fill='url(%23coil)'/%3E%3Cellipse cx='200' cy='150' rx='45' ry='45' fill='%23f5f5f5'/%3E%3Cellipse cx='290' cy='150' rx='65' ry='65' fill='url(%23coil)'/%3E%3Cellipse cx='290' cy='150' rx='45' ry='45' fill='%23f5f5f5'/%3E%3C/g%3E%3C/svg%3E" alt="Bobinas de Aço Inox" class="product-card-image">
-                    <div class="product-card-content">
-                        <h3>Bobinas de Aço Inox</h3>
-                    </div>
-                </div>
+                    <a href="produtos/barras.html" class="product-card carousel-item">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='bar1' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23b8b8b8'/%3E%3Cstop offset='50%25' style='stop-color:%23e8e8e8'/%E3%80%89%3Cstop offset='100%25' style='stop-color:%23b8b8b8'/%E3%80%89%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23ececec' width='400' height='300'/%E3%80%89%3Cg%3E%3Crect fill='url(%23bar1)' x='40' y='50' width='320' height='28'/%E3%80%89%3Crect fill='url(%23bar1)' x='40' y='88' width='320' height='28'/%E3%80%89%3Crect fill='url(%23bar1)' x='40' y='126' width='320' height='28'/%E3%80%89%3Crect fill='url(%23bar1)' x='40' y='164' width='320' height='28'/%E3%80%89%3Crect fill='url(%23bar1)' x='40' y='202' width='320' height='28'/%E3%80%89%3C/g%3E%3C/svg%3E" alt="Barras de Aço Inox Chatas" class="product-card-image">
+                        <div class="product-card-content">
+                            <h3>Barras</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="produtos/bobinas.html" class="product-card carousel-item">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3CradialGradient id='coil'%3E%3Cstop offset='0%25' style='stop-color:%23d8d8d8'/%3E%3Cstop offset='100%25' style='stop-color:%23888888'/%E3%80%89%3C/radialGradient%3E%3C/defs%3E%3Crect fill='%23e0e0e0' width='400' height='300'/%E3%80%89%3Cg%3E%3Cellipse cx='200' cy='150' rx='75' ry='75' fill='url(%23coil)'/%E3%80%89%3Cellipse cx='200' cy='150' rx='55' ry='55' fill='%23f5f5f5'/%E3%80%89%3C/g%3E%3C/svg%3E" alt="Bobinas de Aço Inox" class="product-card-image">
+                        <div class="product-card-content">
+                            <h3>Bobinas</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="produtos/cantoneiras.html" class="product-card carousel-item">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='angle' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23a0a0a0'/%3E%3Cstop offset='50%25' stop-color='%23d0d0d0'/%E3%80%89%3Cstop offset='100%25' stop-color='%23a0a0a0'/%E3%80%89%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%E3%80%89%3Cpolygon points='100,50 150,50 150,250 100,250 100,100 50,100 50,50' fill='url(%23angle)'/%E3%80%89%3C/svg%3E" alt="Cantoneiras de Aço Inox" class="product-card-image">
+                        <div class="product-card-content">
+                            <h3>Cantoneiras</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="produtos/slitter.html" class="product-card carousel-item">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e8e8e8' width='400' height='300'/%E3%80%89%3Crect x='100' y='50' width='200' height='200' fill='%23ccc'/%E3%80%89%3Ccircle cx='200' cy='150' r='80' fill='%23aaa'/%E3%80%89%3Cpath d='M200 150 L200 50 A80 80 0 0 1 280 150 Z' fill='%23888'/%E3%80%89%3Cpath d='M200 150 L200 250 A80 80 0 0 0 280 150 Z' fill='%23999'/%E3%80%89%3Ctext x='200' y='155' font-size='18' fill='%23333' text-anchor='middle'%3ESlitter%3C/text%3E%3C/svg%3E" alt="Serviço de Slitter" class="product-card-image">
+                        <div class="product-card-content">
+                            <h3>Slitter</h3>
+                        </div>
+                    </a>
 
-                <div class="product-card">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='bar1' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23b8b8b8'/%3E%3Cstop offset='50%25' style='stop-color:%23e8e8e8'/%3E%3Cstop offset='100%25' style='stop-color:%23b8b8b8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='%23ececec' width='400' height='300'/%3E%3Cg%3E%3Crect fill='url(%23bar1)' x='40' y='50' width='320' height='28'/%3E%3Crect fill='url(%23bar1)' x='40' y='88' width='320' height='28'/%3E%3Crect fill='url(%23bar1)' x='40' y='126' width='320' height='28'/%3E%3Crect fill='url(%23bar1)' x='40' y='164' width='320' height='28'/%3E%3Crect fill='url(%23bar1)' x='40' y='202' width='320' height='28'/%3E%3C/g%3E%3C/svg%3E" alt="Barras de Aço Inox Chatas" class="product-card-image">
-                    <div class="product-card-content">
-                        <h3>Barras de Aço Inox Chatas ou Retangulares</h3>
-                    </div>
                 </div>
-
-                <div class="product-card">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3CradialGradient id='round'%3E%3Cstop offset='30%25' style='stop-color:%23ececec'/%3E%3Cstop offset='100%25' style='stop-color:%23989898'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='%23e0e0e0' width='400' height='300'/%3E%3Cg%3E%3Ccircle cx='75' cy='150' r='24' fill='url(%23round)'/%3E%3Ccircle cx='125' cy='150' r='24' fill='url(%23round)'/%3E%3Ccircle cx='175' cy='150' r='24' fill='url(%23round)'/%3E%3Ccircle cx='225' cy='150' r='24' fill='url(%23round)'/%3E%3Ccircle cx='275' cy='150' r='24' fill='url(%23round)'/%3E%3Ccircle cx='325' cy='150' r='24' fill='url(%23round)'/%3E%3C/g%3E%3C/svg%3E" alt="Barras Redondas" class="product-card-image">
-                    <div class="product-card-content">
-                        <h3>Barras de Aço Inox Redondas, Sextavadas e Quadradas</h3>
+                
+                <div class="carousel-nav-btn" id="prev-product">❰</div>
+                <div class="carousel-nav-btn" id="next-product">❱</div>
+                
+                <div class="carousel-dots" id="products-dots">
                     </div>
-                </div>
+                
             </div>
-
             <div class="products-footer">
                 <p>
                     Todos os produtos estão disponíveis em diferentes ligas, medidas e acabamentos, garantindo versatilidade para atender às mais diversas demandas industriais.
@@ -117,15 +162,14 @@
             </div>
         </div>
     </section>
-
-    <section class="contact-section">
+    <section class="contact-section" id="contato">
         <div class="contact-info">
             <h2>Entre em Contato</h2>
             <p style="font-size: 17px; margin-bottom: 20px; opacity: 0.9;">
                 Solicite um orçamento personalizado para seu projeto
             </p>
             <a href="#" class="contact-button">
-                📧 Entre em contato
+                📧 Solicitar Orçamento
             </a>
             <br>
             <a href="mailto:comercial@intekinox.com.br" class="email-link">
@@ -140,56 +184,10 @@
         <p>&copy; 2024 Intek. Todos os direitos reservados.</p>
     </footer>
 
-    <a href="https://wa.me/551152002288" class="whatsapp-float" target="_blank" title="WhatsApp">
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" title="WhatsApp">
         💬
     </a>
 
-    <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Active nav link on scroll
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const scrollY = window.pageYOffset;
-
-            sections.forEach(section => {
-                const sectionHeight = section.offsetHeight;
-                const sectionTop = section.offsetTop - 100;
-                const sectionId = section.getAttribute('id');
-                
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.classList.remove('active');
-                    });
-                    const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-                    if (activeLink) {
-                        activeLink.classList.add('active');
-                    }
-                }
-            });
-
-            // Header background on scroll
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.background = 'rgba(255, 255, 255, 1)';
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
