@@ -1,8 +1,6 @@
-// Atribui a altura do header para cálculo de scroll
+
 const headerHeight = 85;
 
-// --- FUNÇÕES GERAIS ---
-// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -16,7 +14,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Mobile menu and Dropdown functionality
 const mobileMenuBtn = document.querySelector('.mobile-menu');
 const navLinks = document.querySelector('.nav-links');
 const dropdown = document.querySelector('.dropdown');
@@ -51,8 +48,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-
-// --- LÓGICA DE ARRASTO E PREVENÇÃO DE CLIQUE (APLICADO SOMENTE A PRODUTOS) ---
 
 const productsCarousel = document.getElementById('products-carousel');
 
@@ -91,7 +86,6 @@ productsCarousel.addEventListener('mousemove', (e) => {
     }
 });
 
-// Previne o clique (navegação) se houve arraste
 productsCarousel.addEventListener('click', (e) => {
     if (dragged) {
         e.preventDefault();
@@ -99,8 +93,6 @@ productsCarousel.addEventListener('click', (e) => {
     }
 }, true);
 
-
-// --- LÓGICA DE NAVEGAÇÃO POR SETAS E BOLINHAS (APLICADA A AMBOS) ---
 
 function setupCarouselNavigation(carouselId, prevId, nextId, dotsId, itemFullWidth, itemsPerView) {
     const carousel = document.getElementById(carouselId);
@@ -113,11 +105,9 @@ function setupCarouselNavigation(carouselId, prevId, nextId, dotsId, itemFullWid
 
     if (items.length === 0) return;
 
-    // Calcula o número de páginas
     const totalPages = Math.ceil(items.length / itemsPerView);
     let currentPage = 0;
 
-    // Gera as bolinhas de navegação
     for (let i = 0; i < totalPages; i++) {
         const dot = document.createElement('span');
         dot.classList.add('dot');
@@ -145,12 +135,10 @@ function setupCarouselNavigation(carouselId, prevId, nextId, dotsId, itemFullWid
         });
     }
 
-    // Navegação por Seta (Next)
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
             let targetScroll = carousel.scrollLeft + (itemsPerView * itemFullWidth);
-            
-            // Loop para o início
+
             if (carousel.scrollWidth - carousel.scrollLeft - carousel.offsetWidth < 10) {
                 targetScroll = 0;
                 currentPage = 0;
@@ -166,12 +154,10 @@ function setupCarouselNavigation(carouselId, prevId, nextId, dotsId, itemFullWid
         });
     }
 
-    // Navegação por Seta (Previous)
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
             let targetScroll = carousel.scrollLeft - (itemsPerView * itemFullWidth);
-            
-            // Loop para o final
+
             if (carousel.scrollLeft < 10) {
                 targetScroll = carousel.scrollWidth - carousel.offsetWidth;
                 currentPage = totalPages - 1;
@@ -187,28 +173,22 @@ function setupCarouselNavigation(carouselId, prevId, nextId, dotsId, itemFullWid
         });
     }
 
-    // Atualiza a bolinha ativa ao arrastar manualmente
+
     carousel.addEventListener('scroll', () => {
         const scrollPosition = carousel.scrollLeft;
         
-        // Pega a largura real do item dinamicamente
         const realItemWidth = items[0].offsetWidth + (parseFloat(window.getComputedStyle(carousel).gap) || 0);
 
-        // Calcula a página com base na posição do scroll
-        // Usa itemFullWidth como fallback se realItemWidth for 0
         const baseWidth = realItemWidth || itemFullWidth;
         
         const newPage = Math.round(scrollPosition / (itemsPerView * baseWidth));
-        
-        // Garante que não ultrapasse os limites
+
         currentPage = Math.min(Math.max(0, newPage), totalPages - 1);
         
         updateDots(currentPage);
     });
 }
 
-// 1. Inicializa Carrossel de PRODUTOS
-// Estimativa: 3 itens visíveis, largura de cada item (450px)
 setupCarouselNavigation(
     'products-carousel', 
     'prev-product', 
@@ -216,15 +196,4 @@ setupCarouselNavigation(
     'products-dots', 
     450, 
     3 
-);
-
-// 2. Inicializa Carrossel de SEGMENTOS
-// Estimativa: 5 itens visíveis, largura de cada item (250px)
-setupCarouselNavigation(
-    'segments-carousel', 
-    'prev-segment', 
-    'next-segment', 
-    'segments-dots', 
-    250, 
-    5
 );
